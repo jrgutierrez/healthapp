@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 from streamlit_authenticator import validator
 from streamlit_option_menu import option_menu
@@ -8,7 +9,7 @@ import plotly.express as px
 
 def run_admin_window():
     # Page title
-    st.sidebar.title(f'Bienvenido, MF.')
+    st.sidebar.title(f"Bienvenido, {os.getenv('CLIENT')}.")
 
     action = 'Inicio'
 
