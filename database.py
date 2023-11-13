@@ -2,12 +2,14 @@ import os
 from dotenv import load_dotenv
 import pymssql
 from datetime import datetime
+import streamlit as st
 
 try:
     load_dotenv('.env')
 except:
     pass
 
+@st.experimental_singleton
 def connect_db():
 
     server = os.getenv('SERVER')
