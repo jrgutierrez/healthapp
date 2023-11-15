@@ -9,7 +9,7 @@ try:
 except:
     pass
 
-@st.experimental_singleton
+@st.cache_resource
 def connect_db():
 
     server = os.getenv('SERVER')
